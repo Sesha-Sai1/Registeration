@@ -11,7 +11,11 @@ const Registeration = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:9999/register", { name, email, password })
+      .post("hhttps://registeration-r60e.onrender.com/register", {
+        name,
+        email,
+        password,
+      })
       .then((result) => {
         console.log(result);
         setEmail("");

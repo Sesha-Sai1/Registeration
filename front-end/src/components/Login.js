@@ -8,7 +8,7 @@ const Login = () => {
 
   const getData = () => {
     axios
-      .get("http://localhost:9999/getAllRegisters")
+      .get("https://registeration-r60e.onrender.com/getAllRegisters")
       .then((result) => {
         setData(result.data);
         console.log(result.data);
