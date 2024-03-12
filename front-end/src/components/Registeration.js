@@ -11,7 +11,7 @@ const Registeration = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("hhttps://registeration-r60e.onrender.com/register", {
+      .post("https://registeration-r60e.onrender.com/register", {
         name,
         email,
         password,
@@ -22,6 +22,7 @@ const Registeration = () => {
         setName("");
         setPassword("");
         alert("Successfully Registered");
+        navigate("/login");
       })
       .catch((err) => {
         console.log(err.response.data);
@@ -29,7 +30,6 @@ const Registeration = () => {
           alert("Email already exists");
         }
       });
-    navigate("/login");
   };
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-primary">
